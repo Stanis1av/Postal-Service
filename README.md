@@ -1,24 +1,28 @@
-# README
+# Postal Service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Project Description
+Implementation of the "Post-Service" system, which allows you to track postal items and transfer funds.
 
-Things you may want to cover:
+### Tech
 
-* Ruby version
+Dillinger uses a number of open source projects to work properly:
 
-* System dependencies
+* Ruby 2.7.2
+* Ruby on Rails 6.0.3.4
+* sqlite3 3.31.1
 
-* Configuration
+### Installation
 
-* Database creation
 
-* Database initialization
+```sh
+$ git clone https://github.com/Stanis1av/Postal-Service.git
+$ bundle install
+```
 
-* How to run the test suite
+License
+----
 
-* Services (job queues, cache servers, search engines, etc.)
+MIT
 
-* Deployment instructions
 
-* ...
+**Free Software, Hell Yeah!**
