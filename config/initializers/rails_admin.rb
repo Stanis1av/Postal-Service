@@ -7,9 +7,14 @@ RailsAdmin.config do |config|
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
-
+  RailsAdmin.config do |config|
+  config.authorize_with do
+    redirect_to main_app.root_path unless current_user.is_superadmin?
+  end
+end
   ## == CancanCan ==
-  # config.authorize_with :cancancan
+  config.authorize_with :cancancan
+  # config.authorize_with :cancan
 
   ## == Pundit ==
   # config.authorize_with :pundit

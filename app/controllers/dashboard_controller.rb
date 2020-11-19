@@ -1,0 +1,3 @@
+class DashboardController < ApplicationController
+  load_and_authorize_resource
+end
