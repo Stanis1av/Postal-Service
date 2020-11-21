@@ -34,7 +34,7 @@
       
         <% if user_signed_in? %>
 
-          <b class="username_style"><%= current_user.username %></b> <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-outline-success" %>
+          <b class="username_style"><%= current_user.username %></b> <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn btn-outline-danger" %>
 
         <% else %>
 
