@@ -1,2 +1,14 @@
-<h1>Profile#index</h1>
-<p>Find me in app/views/profile/index.html.erb</p>
+<h1>Your Profile</h1>
+
+<p>Your login: <b><%= @profile.user.username %></b></p>
+
+<p>Your email address: <b><%= @profile.user.email %></b></p>
+
+<p>Your first name: <b><%= @profile.first_name %></b></p>
+
+<p>Your last name: <b><%= @profile.last_name %></b></p>
+
+<p>Your home address: <b><%= @profile.home_address %></b></p>
+
+<small>Registration date: <b><%= @profile.user.created_at %></small>
+
