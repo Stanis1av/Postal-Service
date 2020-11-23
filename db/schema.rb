@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_21_180722) do
+ActiveRecord::Schema.define(version: 2020_11_22_173349) do
+
+  create_table "mailings", force: :cascade do |t|
+    t.string "track_number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string "first_name"
