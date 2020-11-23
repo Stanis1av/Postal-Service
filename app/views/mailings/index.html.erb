@@ -2,3 +2,13 @@
 <br/>
 <h3>Search or Track Packages</h3>
 
+<%= form_for :mailing, url: mailing_index_path do |f| %>
+
+	<div class="field">
+	    <%= f.label :track_number %><br />
+	    <%= f.text_field :track_number, class: "form-control col-3" %>
+ 	 </div>
+
+	<br/><%= f.submit 'Find mailing', class: "btn btn-primary" %>
+
+<% end %>
