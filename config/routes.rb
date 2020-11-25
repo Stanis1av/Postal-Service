@@ -4,10 +4,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get 'mailing/index'
+  #get 'mailing/index'
 
   root to: 'mailings#index'
 
   resource :profile, only: [:show, :edit, :update], path_names: { :show => '' }
+  resources :mailings
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

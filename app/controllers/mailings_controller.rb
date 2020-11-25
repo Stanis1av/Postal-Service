@@ -14,4 +14,10 @@ class MailingsController < ApplicationController
   def create
 
   end
+
+  private
+
+  def mailing_params
+    params.require(:mailing).permit(:track_number)
+  end
 end
