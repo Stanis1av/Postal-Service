@@ -14,8 +14,10 @@ ActiveRecord::Schema.define(version: 2020_11_22_173349) do
 
   create_table "mailings", force: :cascade do |t|
     t.string "track_number"
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_mailings_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -42,5 +44,6 @@ ActiveRecord::Schema.define(version: 2020_11_22_173349) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "mailings", "users"
   add_foreign_key "profiles", "users"
 end
